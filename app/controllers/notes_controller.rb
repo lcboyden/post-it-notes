@@ -9,6 +9,7 @@ class NotesController < ApplicationController
 
   def new
     @note = Note.new
+    render partial: 'form' 
   end
 
   def create
@@ -23,6 +24,7 @@ class NotesController < ApplicationController
 
   def edit
     @note = Note.find(params[:id])
+    render partial: 'form'
   end
 
   def update
